@@ -1,0 +1,409 @@
+/*
+Sign in & Sign up Template
+Author: Ciuca Cristi (Criatix)
+Version: 1.3
+Framework: Bootstrap 4.0
+Demo: http://ciucacristi.tk/login/
+*/
+body {
+  font-family: 'Raleway';
+  background-color: #ececec;
+  margin: 0;
+  padding: 0;
+
+}
+
+*:focus { /* Remove outline from all elements */
+  outline: none;
+}
+
+.form-control:focus { /* Remove outline from inputs */
+  outline: none;
+  box-shadow:none !important;
+}
+
+.left-menu { /* Login left side menu*/
+  float: left;
+  background-color: #fff;
+  text-align: center;
+  width: 30%;
+  height: 60rem;
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-icon { /* login Icon */
+  margin-top: 5rem;
+  color: #5b5b5b;
+}
+
+.title-menu { /* Title Login */
+  font-family: 'Raleway ExtraLight';
+  font-size: 3rem;
+  margin-top: 4rem;
+  color: #000;
+}
+
+.form-group { /* Edit Bootstrap Form Group */
+  font-family: 'Raleway';
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form-group input { /* Edit Bootstrap Input */
+  height: 2.5rem;
+  width: 100%;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #7932d6;
+}
+
+.form-group input:focus, /* Edit Bootstrap Input */
+.form-group input:valid  {
+  border-bottom: 1px solid #c33;
+}
+
+.form-group label { /* Edit Input Text */
+  color: #888888;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 5px;
+  transition: 0.2s;
+}
+
+.form-group input:focus ~ label,  /* Edit Input Text */
+.form-group input:valid ~ label {
+  top: -25px;
+  left: 0;
+  color: #c33;
+}
+
+.btn-custom1 { /* Edit Bootstrap Button */
+  background: linear-gradient(to right, #2269d4, #7932d6);
+  outline: none;
+  width: 7.5rem;
+  height: 2.6rem;
+  margin-top: 2.5rem;
+  border-radius: 30px;
+}
+
+.btn-custom1:hover { /* Edit Bootstrap Button Hover */
+  background: linear-gradient(to left, #2269d4, #7932d6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+a:link { /* Edit Links*/
+  color: #222222;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited { /* Edit Links*/
+  color: #666666;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover { /* Edit Links*/
+  color: #2269d4;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active { /* Edit Links*/
+  color: #ccc;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px){ /* Responsive Media Queries*/
+  .left-menu {
+    width: 50%;
+    height: 65rem !important;
+  }
+  .right-menu {
+    width: 50% !important;
+    height: 65rem !important;
+  }
+
+}
+
+@media screen and (max-width: 650px){ /* Responsive Media Queries*/
+  .left-menu {
+    width: 100% !important;
+
+  }
+  .right-menu {
+    display: none;
+  }
+
+}
+
+.right-menu { /* Right Side With Background */
+  float: right;
+  background: linear-gradient(to left, #2289d4, #7932d6);
+  width: 70%;
+  height: 60rem;
+  text-align: center;
+  padding-top: 250px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.right-menu .title { /* Right Side Title*/
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Raleway Thin';
+}
+
+.right-menu .description { /* Right Side Description */
+  color: #fff;
+  margin-top: 4rem;
+  font-family: 'Raleway Light';
+}
+
+.btn-custom2 { /* Edit Bootstrap Button */
+  border:2px solid #7932d6;
+  background: none;
+  outline: none;
+  width: 8rem;
+  height: 3rem;
+  margin-top: 2.5rem;
+  border-radius: 30px;
+}
+
+.btn-custom2:hover { /* Edit Bootstrap Button Hover */
+  background: linear-gradient(to left, #2269d4, #7932d6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+.right-menu .title{ /* Right Side Title Animation */
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+.right-menu .description { /* Right Side Description Animation */
+  animation: fadein 4s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -o-animation: fadein 4s; /* Opera */
+}
+.right-menu .btn-custom2 { /* Right Side Button Animation */
+  animation: fadein 4.5s;
+  -moz-animation: fadein 4.5s; /* Firefox */
+  -webkit-animation: fadein 4.5s; /* Safari and Chrome */
+  -o-animation: fadein 4.5s; /* Opera */
+}
+
+@keyframes fadein { /* Animation */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Animation Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Animation Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Animation Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* SIGN UP PAGE */
+
+.signup-left-menu { /* Sign up left side menu*/
+  float: left;
+  padding-top: 9rem;
+  background: linear-gradient(to left, #2289d4, #5832d6);
+  text-align: center;
+  width: 30%;
+  height: 60rem;
+  position: absolute;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.signup-title-menu { /* Title Login */
+  font-family: 'Raleway ExtraLight';
+  font-size: 3rem;
+  margin-top: 4rem;
+  color: #fff;
+}
+
+.menu-description { /* Sign up text description */
+  margin-top: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px){ /* Responsive Media Queries*/
+  .signup-left-menu {
+    width: 40%;
+  }
+
+  .signup-right-menu {
+    width: 60%;
+  }
+
+}
+
+@media screen and (max-width: 900px){ /* Responsive Media Queries*/
+  .signup-left-menu {
+    display: none;
+  }
+}
+
+.signup-left-menu .signup-title-menu{ /* Left Side Title Animation */
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+.signup-left-menu .menu-description { /* Left Side Description Animation */
+  animation: fadein 4s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -o-animation: fadein 4s; /* Opera */
+}
+.signup-left-menu .btn-custom2 { /* Left Side Button Animation */
+  animation: fadein 4.5s;
+  -moz-animation: fadein 4.5s; /* Firefox */
+  -webkit-animation: fadein 4.5s; /* Safari and Chrome */
+  -o-animation: fadein 4.5s; /* Opera */
+}
+
+.signup-right-menu { /* Sign up right side menu*/
+  float: right;
+  background: #fff;
+  width: 70%;
+  height: 60rem;
+}
+
+.signup-title { /* Sign up title */
+  font-family: 'Raleway ExtraLight';
+  color: #000;
+  font-size: 3rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.signup-icon { /* Sign up icon */
+  color: #5b5b5b;
+}
+
+.signup { /* Sign up form container */
+  width: 60%;
+  height: auto;
+  box-shadow: 0 4px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding-top: 0.2rem;
+}
+
+.form-check { /* Edit checkbox */
+  margin-top: 2rem;
+  color: #878787;
+  text-align: center;
+}
+
+.btn-custom3 { /* Edit Bootstrap Button */
+  background: none;
+  outline: none;
+  color: #2269d4;
+  width: 8rem;
+  height: 3rem;
+  margin:0 auto !important;
+  display: block;
+  border-radius: 0px;
+}
+
+.btn-custom3:hover { /* Edit Bootstrap Button Hover */
+  background: linear-gradient(to left, #2269d4, #7932d6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+.btns { /* Sign up buttons div */
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 3rem;
+
+}
+
+.login-link { /* "You have account?" link position */
+  text-align: center;
+  padding-top: 1.5rem;
+
+}
+
+@media screen and (max-width: 900px){ /* Responsive Media Queries*/
+  .signup-right-menu{
+    width: 100%;
+  }
+  .signup {
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-height: 960px){ /* Responsive Media Queries*/
+  .left-menu {
+    height: 80rem;
+  }
+  .right-menu {
+    height: 80rem;
+  }
+
+  .signup-left-menu {
+    height: 80rem;
+  }
+
+  .signup-right-menu {
+    height: 80rem;
+  }
+
+}
+
+@media screen and (min-height: 1280px){ /* Responsive Media Queries*/
+  .left-menu {
+    height: 100rem;
+  }
+  .right-menu {
+    height: 100rem;
+  }
+
+  .signup-left-menu {
+    height: 100rem;
+  }
+
+  .signup-right-menu {
+    height: 100rem;
+  }
+
+}
+/* -------------------- */
