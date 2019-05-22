@@ -236,7 +236,7 @@
                 </section>
             </div>
             <footer class="main-footer">
-                Copyright &copy; 2018 - <a href="https://www.mc-market.org/resources/8394/">5.1a</a>.
+                Copyright &copy; 2019 - Bothosted
             </footer>
             @if(isset($sidebarServerList))
                 <aside class="control-sidebar control-sidebar-dark">
